@@ -13,15 +13,15 @@ function validateForm(){
 	var primerMayuscula = /^[A-Z]{1}/;//la primera letra en Mayuscula
 	var expresionDominio = /^[a-z0-9]+\.[a-z]{2,3}$/;//dominio7.com
 
-	if(nombre =="" || apellido =="" || email =="" || password =="" || tipo_bici == "0"){//validar si no se ingresa informacion
+	if(nombre =="" || apellido =="" || email =="" || password =="" || tipo_bici == "0"){//validar campos vacios
 		alert("Llenar campos obliggatorios");
 	}else{
-		if(soloLetras.test(nombre) && soloLetras.test(apellido)){
-			if(primerMayuscula.test(nombre) && primerMayuscula.test(apellido)){
+		if(soloLetras.test(nombre) && soloLetras.test(apellido)){//validar solo letras
+			if(primerMayuscula.test(nombre) && primerMayuscula.test(apellido)){//validar que la 1° letra sea mayuscula
 				alert("Tu [Nombre y Apellido] estan bien escritos");
-				if(expresionDominio.test(stringDominio)){
+				if(expresionDominio.test(stringDominio)){//validar email
 					alert("tu email esta bien escrito");
-					if(password.length>=6 && password!="password" && password!="123456" && password!="098754"){
+					if(password.length>=6 && password!="password" && password!="123456" && password!="098754"){//validar password
 						alert("Datos ingresados correctamente");
 					}
 					else{
