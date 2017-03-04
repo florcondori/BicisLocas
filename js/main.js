@@ -9,7 +9,7 @@ function validateForm(){
 	var stringDominio = email.substr(email.indexOf("@")+1);
 	console.log(stringDominio);
 	// declarar expresiones regulares
-	var soloLetras = /^[A-Z a-z]{2,50}$/;//solo letras , *permite repetidas, con espacios
+	var soloLetras = /^([A-Za-zá-ú]{2,50}\s?)*$/;//solo letras, permite solo un espacio entre palabras
 	var primerMayuscula = /^[A-Z]{1}/;//la primera letra en Mayuscula
 	var expresionDominio = /^[a-z0-9]+\.[a-z]{2,3}$/;//dominio7.com
 
